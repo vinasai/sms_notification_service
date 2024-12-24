@@ -87,6 +87,7 @@ import AddStudent from "./components/groups/addStudent";
 import UploadFiles from "./components/groups/uploadFiles";
 import Files from "./components/files/files";
 import ViewBulkDetailsPage from "./pages/ViewBulkDetailsPage";
+import Login from "./components/login/login";
 
 
 function App() {
@@ -94,7 +95,8 @@ function App() {
     <BrowserRouter>
       <RouteScrollToTop />
       <Routes>
-        <Route exact path="/" element={<HomePageOne />} />
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/dashboard" element={<HomePageOne />} />
         <Route exact path="/index-2" element={<HomePageTwo />} />
         <Route exact path="/index-3" element={<HomePageThree />} />
         <Route exact path="/index-4" element={<HomePageFour />} />
@@ -103,10 +105,10 @@ function App() {
         <Route exact path="/index-7" element={<HomePageSeven />} />
         {/* SL */}
         <Route exact path="/add-user" element={<AddUserPage />} />
-        <Route exact path="/add-group" element={<AddGroup/>} />
-        <Route exact path="/add-student" element={<AddStudent/>} />
+        <Route exact path="/add-group" element={<AddGroup />} />
+        <Route exact path="/add-student" element={<AddStudent />} />
         <Route exact path="/upload-files" element={<UploadFiles />} />
-        <Route exact path="/files" element={<Files/>} />
+        <Route exact path="/files" element={<Files />} />
         <Route exact path="/alert" element={<AlertPage />} />
         <Route exact path="/assign-role" element={<AssignRolePage />} />
         <Route exact path="/avatar" element={<AvatarPage />} />
@@ -172,7 +174,7 @@ function App() {
         <Route exact path="/typography" element={<TypographyPage />} />
         <Route exact path="/users-grid" element={<UsersGridPage />} />
         <Route exact path="/users-list" element={<UsersListPage />} />
-        <Route exact path="/group-list" element={<Group/>} />
+        <Route exact path="/group-list" element={<Group />} />
         <Route exact path="/view-details" element={<ViewDetailsPage />} />
         <Route exact path="/view-details/:id" element={<ViewDetailsPage />} />
         <Route exact path="/bulk-view-details" element={<ViewBulkDetailsPage />} />
