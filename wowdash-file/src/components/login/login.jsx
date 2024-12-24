@@ -1,9 +1,35 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css'
+import FormHandler from 'react-form-buddy';
 
 const Login = () => {
+
     const navigate = useNavigate();
+
+    const validate = (values) => {
+        let errors = {};
+        if (!values.email) {
+            errors.email = "Username / Email is required";
+        }
+        if (!values.password) {
+            errors.password = "Password is required";
+        }
+        return errors;
+    };
+
+    const submitForm = () => {
+        if(values.email === "admin" && values.password === "admin"){
+            navigate('/dashboard')
+        }
+        else{
+            alert('Username / Email or Password is Wrong')
+        }
+        console.log("Form submitted successfully!");
+    };
+
+
+    const { handleChange, handleSubmit, values, errors } = FormHandler(submitForm, validate);
     return (
         <div className='body'>
             <div className="login-container d-flex justify-content-center align-items-center">
@@ -17,8 +43,12 @@ const Login = () => {
                                 type="text"
                                 id="username"
                                 className="form-control"
+                                name="email"
+                                value={values.email || ''}
+                                onChange={handleChange}
                                 placeholder="Enter your username or email"
                             />
+                            {errors.email && <p className='text-red'>{errors.email}</p>}
                         </div>
                         <div className="form-group mb-4">
                             <label htmlFor="password">
@@ -28,10 +58,14 @@ const Login = () => {
                                 type="password"
                                 id="password"
                                 className="form-control"
+                                name="password"
+                                value={values.password || ''}
+                                onChange={handleChange}
                                 placeholder="Enter your password"
                             />
+                            {errors.password && <p className='text-red'>{errors.password}</p>}
                         </div>
-                        <button type="submit" className="btn btn-primary w-100 mb-3 mt-3" onClick={() => navigate('/dashboard')}>
+                        <button type="submit" className="btn btn-primary w-100 mb-3 mt-3" onClick={handleSubmit}>
                             LOG IN NOW
                         </button>
                     </form>
