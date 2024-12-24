@@ -83,8 +83,8 @@ const MasterLayout = ({ children }) => {
           sidebarActive
             ? "sidebar active "
             : mobileMenu
-            ? "sidebar sidebar-open"
-            : "sidebar"
+              ? "sidebar sidebar-open"
+              : "sidebar"
         }
       >
         <button
@@ -193,17 +193,17 @@ const MasterLayout = ({ children }) => {
                 >
                   <Icon icon="heroicons:bars-3-solid" className="icon" />
                 </button>
-                <form className="navbar-search">
+                {/* <form className="navbar-search">
                   <input type="text" name="search" placeholder="Search" />
                   <Icon icon="ion:search-outline" className="icon" />
-                </form>
+                </form> */}
               </div>
             </div>
             <div className="col-auto">
               <div className="d-flex flex-wrap align-items-center gap-3">
                 {/* ThemeToggleButton */}
                 <ThemeToggleButton />
-                <div className="dropdown d-none d-sm-inline-block">
+                {/* <div className="dropdown d-none d-sm-inline-block">
                   <button
                     className="has-indicator w-40-px h-40-px bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center"
                     type="button"
@@ -410,9 +410,9 @@ const MasterLayout = ({ children }) => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* Language dropdown end */}
-                <div className="dropdown">
+                {/* <div className="dropdown">
                   <button
                     className="has-indicator w-40-px h-40-px bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center"
                     type="button"
@@ -595,9 +595,9 @@ const MasterLayout = ({ children }) => {
                       </Link>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* Message dropdown end */}
-                <div className="dropdown">
+                {/* <div className="dropdown">
                   <button
                     className="has-indicator w-40-px h-40-px bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center"
                     type="button"
@@ -745,9 +745,9 @@ const MasterLayout = ({ children }) => {
                       </Link>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* Notification dropdown end */}
-                <div className="dropdown">
+                {/* <div className="dropdown">
                   <button
                     className="d-flex justify-content-center align-items-center rounded-circle"
                     type="button"
@@ -824,7 +824,7 @@ const MasterLayout = ({ children }) => {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 {/* Profile dropdown end */}
               </div>
             </div>
@@ -838,11 +838,11 @@ const MasterLayout = ({ children }) => {
         <footer className="d-footer">
           <div className="row align-items-center justify-content-between">
             <div className="col-auto">
-              <p className="mb-0">© 2024 WowDash. All Rights Reserved.</p>
+              <p className="mb-0">© 2024 Vinasai. All Rights Reserved.</p>
             </div>
             <div className="col-auto">
               <p className="mb-0">
-                Made by <span className="text-primary-600">wowtheme7</span>
+                Made by <span className="text-primary-600">Vinasai</span>
               </p>
             </div>
           </div>
